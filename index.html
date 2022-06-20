@@ -2,41 +2,38 @@
 <html lang="en" >
 	<head>
 		<meta charset="UTF-8">
-		<title>CodePen - Simple Coming soon or Under construcion [flat design]</title>
+		<title>Studio Maayin</title>
 		<link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css'>
 		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Architects+Daughter'>
 		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Dosis'>
-		<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'><link rel="stylesheet" href="./style.css">
+		<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
 
 	</head>
 	<body>
 		<!-- partial:index.partial.html -->
 		<header>
-			<h1>{ We're Coming }</h1>
-			<h3>If you leave us your address we can contact you</h3>
+			<h1>We're Coming Soon</h1>
 		</header>
 
 		<section class="container"> 
 			<div class="wrapBox animated rollIn">
 				<div class="box">
 					<div class="thanks"><p>THANK YOU!</p></div>
-					<form action="#">
+					<form action="mailTo:studiomaayin@gmail.com" method="post" enctype="text/plain">
 						<div>
-							<label for="first-name">Your best email address:</label>
-							<input type="email" name="first-name" id="name" placeholder="" />
+							<label style="important! text-align: center;">Contact Us</label>
 						</div>
 
 						<div>
-							<button id="send" type="submit">SUBMIT <i class="fa fa-paper-plane"></i></button>
+							<button id="send" type="submit">Email<i class="fa fa-paper-plane"></i></button>
 						</div>
 					</form>
 					<div class="social">
-						<ul>
-							<li><i class="fa fa-facebook"></i></li>
-							<li><i class="fa fa-google-plus"></i></li>
-							<li><i class="fa fa-twitter"></i></li>
-							<li><i class="fa fa-youtube"></i></li>
-						</ul>
+						<div>
+							<button class="insta-box">
+								<a href="https://www.instagram.com/studio_maayin/"> INSTAGRAM <i class="fa fa-instagram"></i></a>
+							</button>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -44,7 +41,7 @@
 
 		<footer></footer>
 		<!-- partial -->
-		<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
+		<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
 	</body>
 </html>
@@ -60,6 +57,15 @@ header h1, header h3 {
 	text-align: center;
 	font-family: "Architects Daughter", cursive;
 	color: #95a5a6;
+}
+
+.insta-box {
+	border: solid 3px #FFF;
+	padding: 2px;
+	font-family: "Architects Daughter", cursive;
+	font-size: 1.5em;
+	background-color: #e74c3c;
+	margin: 30px auto;
 }
 
 .container {
@@ -164,19 +170,19 @@ header h1, header h3 {
 	font-family: "Architects Daughter", cursive;
 }
 
-  /* Responsive */
-  /* Desktops and laptops ----------- */
-  @media only screen and (max-width: 1024px) {
-	  .container {
-		  width: 60%;
+	  /* Responsive */
+	  /* Desktops and laptops ----------- */
+	  @media only screen and (max-width: 1024px) {
+		  .container {
+			  width: 60%;
+		  }
 	  }
-  }
 </style>
 
 <script>
 	$(document).ready(function() {
 			$('#send').click(function(e) {
-					e.preventDefault();
+					// e.preventDefault();
 					$(this).addClass('animated fadeOutRight');
 					$('.box form').addClass('animated fadeOut');
 
